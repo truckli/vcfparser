@@ -4,6 +4,8 @@ A very simple Python 3 parser/formatter for vCard(vcf) files.
 
 ## example 1: load items from vCard files, and add attributes like phone numbers, organizations, job titles, et.al.
 ```python
+import vcfparser
+
 items = load('example.vcf')  
 item = items['John Smith']
 item.add_title('Superman') ## add a job title for this person
@@ -33,6 +35,8 @@ END:VCARD
 
 ## example 2: construct an item from thin air
 ```python
+import vcfparser
+
 item = VcardItem()
 item.construct("myname", 'mycell', 'myworkphone')
 print(item)
